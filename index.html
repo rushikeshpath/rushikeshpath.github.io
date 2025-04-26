@@ -6,52 +6,85 @@
   <title>Sakshi Chandrakant Kadam- Resume</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f4f4f4;
       margin: 0;
       padding: 0;
+      background-color: #000;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      overflow-x: hidden;
+    }
+    header {
+      padding: 20px 30px;
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 0.5s;
+    }
+    .logo {
+      font-size: 22px;
+      color: #a855f7; /* Purple */
+      text-decoration: none;
+      font-weight: 600;
+    }
+    main {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-    }
-    .container {
-      background: white;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
       text-align: center;
-      max-width: 500px;
+      height: 80vh;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 1s;
     }
-    h1 {
-      color: #333;
-      margin-bottom: 10px;
-    }
-    p {
-      color: #555;
-      margin-bottom: 30px;
-    }
-    a.button {
-      background-color: #007BFF;
+    main h1 {
+      font-size: 42px;
+      margin: 0;
       color: white;
-      padding: 12px 25px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: 18px;
-      transition: background 0.3s ease;
     }
-    a.button:hover {
-      background-color: #0056b3;
+    main h2 {
+      font-size: 40px;
+      margin: 10px 0;
+      color: #a855f7; /* Purple */
+    }
+    main p {
+      font-size: 20px;
+      color: #cccccc;
+      margin-bottom: 40px;
+    }
+    .download-btn {
+      background-color: #a855f7; /* Purple */
+      color: white;
+      padding: 12px 30px;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+    .download-btn:hover {
+      background-color: #9333ea; /* Slightly darker purple */
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <h1>Sakshi Chandrakant Kadam</h1>
-    <p>Welcome to my online resume page. You can download my resume below:</p>
-    <a href="Rushikesh_Resume.pdf" class="button" download>Download Resume</a>
-  </div>
+  <header>
+    <a href="#" class="logo">Sakshi Kadam</a>
+  </header>
+
+  <main>
+    <h1>I am</h1>
+    <h2>Sakshi Chandrakant Kadam</h2>
+    <p>Software Programmer & Coder</p>
+    <a href="Rushikesh_Resume.pdf" class="download-btn" download>Download CV</a>
+  </main>
 
 </body>
 </html>
